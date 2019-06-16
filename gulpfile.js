@@ -67,4 +67,4 @@ gulp.task('pages', gulp.series('clean', function () {
 }));
 
 // Gulp task to minify all files
-gulp.task('default', gulp.series('styles', 'scripts', 'images', 'pages'));
+gulp.task('default', gulp.series('styles', 'scripts', 'images', 'pages', 'browserSync'));
