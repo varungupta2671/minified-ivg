@@ -32,7 +32,7 @@ gulp.task('browserSyncReload', gulp.series('clean', function (done) {
 
 // Gulp task to minify CSS files
 gulp.task('styles', gulp.series('clean', function () {
-  return gulp.src('./src/css/style.css')
+  return gulp.src('./src/css/**/*.css')
     .pipe(csso())
     .pipe(gulp.dest('./dist/css'))
 }));
@@ -46,7 +46,7 @@ gulp.task('scripts', gulp.series('clean', function () {
 
 // Gulp task to optimize Images
 gulp.task('images', gulp.series('clean', function () {
-  return gulp.src("./src/images/**/*")
+  return gulp.src("./src/img/**/*")
     .pipe(imagemin([
         imagemin.gifsicle({ interlaced: true }),
         imagemin.jpegtran({ progressive: true }),
